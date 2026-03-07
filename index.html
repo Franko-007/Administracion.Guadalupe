@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+================================================================================
+    Copyright © 2026 Franco - Todos los derechos reservados
+    
+    Sistema de Administración Pedagógica
+    Liceo Bicentenario Nuestra Señora de Guadalupe
+    
+    ADVERTENCIA: Este código está protegido por derechos de autor.
+    Prohibida su modificación, copia o distribución sin autorización.
+    
+    Desarrollador: Franco
+    Año: 2026
+================================================================================
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Liceo Bicentenario Nuestra Señora de Guadalupe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png">
+    <link rel="stylesheet" href="styles.css">
+<style>
+    /* BOTÓN VOLVER ARRIBA */
+    #btn-top {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 46px;
+        height: 46px;
+        background-color: #1f2f5c;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: background 0.3s, transform 0.2s;
+    }
+    #btn-top:hover {
+        background-color: #2f4179;
+        transform: translateY(-3px);
+    }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png" class="logo" alt="Insignia institucional">
+            <h1>Administración<br>Pedagógica</h1>
+            <span>2026</span>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="espacios.html">Administración de Espacios</a>
+            <a href="informatica.html">Área Informática</a>
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="main-content">
+
+        <!-- BANNER -->
+        <div class="banner-home">
+            <img src="https://i.postimg.cc/mgmSJkDW/Captura-desde-2026-01-22-12-42-56.png"
+                 alt="Banner Administración Pedagógica">
+        </div>
+
+        <h2>Panel de Administración</h2>
+        <p>
+            Bienvenido al sistema de Administración Pedagógica del
+            Liceo Bicentenario Nuestra Señora de Guadalupe.
+        </p>
+
+        <!-- OBJETIVO -->
+        <section class="box">
+            <h2>Objetivo del Departamento</h2>
+            <p>
+                La administración pedagógica es la encargada del proceso de planificación,
+                organización y gestión de la enseñanza dentro de nuestra institución. Nuestro
+                objetivo es garantizar una educación de calidad, optimizando los recursos
+                humanos y materiales, promoviendo metodologías innovadoras y evaluando
+                constantemente los resultados para favorecer el aprendizaje integral de
+                nuestros estudiantes.
+            </p>
+        </section>
+
+        <!-- CEAS -->
+        <section class="info-diagram">
+            <div class="ceas-layout">
+                <div class="ceas-image">
+                    <img src="https://i.postimg.cc/7L9tw4NS/Captura-desde-2026-01-22-13-56-13.png"
+                         alt="Corporación Educacional del Arzobispado de Santiago">
+                </div>
+                <div class="ceas-text">
+                    <h3>CEAS</h3>
+                    <p>
+                        La Corporación Educacional del Arzobispado de Santiago (CEAS) es una
+                        fundación de derecho canónico, sin fines de lucro, perteneciente a la
+                        Arquidiócesis de Santiago. Está formada por una red de 11 colegios que
+                        desde 1991 entregan experiencias educativas de calidad a niños, niñas y
+                        jóvenes en contextos vulnerables.
+                    </p>
+                    <p>
+                        Nuestra Misión es ser una red de colegios católicos, inclusivos y de
+                        excelencia que busca desarrollar procesos formativos y de aprendizaje
+                        de calidad que permita a nuestros estudiantes construir proyectos de
+                        vida coherentes con los valores del Evangelio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LBNSG -->
+        <section class="info-diagram">
+            <div class="ceas-layout">
+                <div class="ceas-image">
+                    <img src="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png"
+                         alt="Liceo Bicentenario Nuestra Señora de Guadalupe">
+                </div>
+                <div class="ceas-text">
+                    <h3>LBNSG</h3>
+                    <p>
+                        Nuestra Misión es ser una red de colegios católicos, inclusivos y de
+                        excelencia que busca desarrollar procesos formativos y de aprendizaje
+                        de calidad que permita a nuestros estudiantes construir proyectos de
+                        vida coherentes con los valores del Evangelio.
+                    </p>
+                    <p>
+                        Con esta convicción aspiramos a que nuestros alumnos y alumnas puedan
+                        contar con los conocimientos y habilidades necesarios para
+                        desenvolverse adecuadamente en diferentes ámbitos de su vida futura.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTONES DE ACCESO (ESTILO AZUL) -->
+        <section class="space-buttons" style="margin-top: 40px; margin-bottom: 60px;">
+            <a href="espacios.html" class="space-btn">ADMINISTRACIÓN DE ESPACIOS</a>
+            <a href="informatica.html" class="space-btn">ÁREA INFORMÁTICA</a>
+        </section>
+
+             <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-title">
+                    Liceo Bicentenario Nuestra Señora de Guadalupe
+                </p>
+                <p>
+                    📧 <strong>Correo electrónico:</strong> liceobicentenario@ceas.cl &nbsp; | &nbsp;
+                    📍 <strong>Dirección:</strong> San José de la Estrella Nº 0857, La Granja
+                </p>
+                <p>
+                    📞 <strong>Teléfonos:</strong> +56 2 2541 1023 – +56 2 2541 9631
+                </p>
+                <p class="footer-copy">
+                    © 2026 Administración Pedagógica · Todos los derechos reservados
+                </p>
+                <p class="footer-copy" style="margin-top: 5px;">
+                    💻 Desarrollado por <strong>Franco</strong>
+                </p>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- Botón volver arriba -->
+<button id="btn-top" title="Volver arriba">&#8679;</button>
+<script>
+    var btnTop = document.getElementById('btn-top');
+    window.addEventListener('scroll', function() {
+        btnTop.style.display = window.scrollY > 200 ? 'flex' : 'none';
+    });
+    btnTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>

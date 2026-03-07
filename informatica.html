@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+================================================================================
+    Copyright © 2026 Franco - Todos los derechos reservados
+    Sistema de Administración Pedagógica - Área Informática
+    Liceo Bicentenario Nuestra Señora de Guadalupe
+    ADVERTENCIA: Código protegido. Prohibida su modificación sin autorización.
+    Desarrollador: Franco | Año: 2026
+================================================================================
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Área Informática | Liceo Bicentenario Nuestra Señora de Guadalupe</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: #1e2b58;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .sidebar-header img {
+            width: 90px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        .sidebar-header span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-size: 0.95rem;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background-color: #142047;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: #1e2b58;
+        }
+
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .image-center-box {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .image-center-box img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .space-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 60px;
+        }
+
+        .space-btn {
+            padding: 12px 26px;
+            background-color: #1e2b58;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .space-btn:hover {
+            background-color: #142047;
+        }
+
+        .footer {
+            background-color: #1e2b58;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: auto;
+            border-radius: 8px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            font-weight: bold;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-content p {
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-copy {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .modal-content h3 {
+            color: #1e2b58;
+            margin-bottom: 15px;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .modal-content button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e2b58;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .error {
+            color: #c0392b;
+            margin-top: 10px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 26px;
+            color: #333;
+            cursor: pointer;
+        }
+    
+        /* BOTÓN VOLVER ARRIBA */
+        #btn-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 46px;
+            height: 46px;
+            background-color: #1f2f5c;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #btn-top:hover {
+            background-color: #2f4179;
+            transform: translateY(-3px);
+        }
+    </style>
+
+    <script>
+        const _0x4a2b = "aW5mb3JtYXRpY28yMDI2"; 
+
+        function abrirLogin() {
+            document.getElementById("loginModal").style.display = "flex";
+            document.getElementById("clave").value = "";
+            document.getElementById("errorMsg").style.display = "none";
+            setTimeout(() => {
+                document.getElementById("clave").focus();
+            }, 100);
+        }
+
+        function cerrarLogin() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+
+        function validarLogin() {
+            const inputField = document.getElementById("clave");
+            const userPass = inputField.value.trim();
+
+            if (userPass === atob(_0x4a2b)) {
+                window.open(
+                    "https://franko-007.github.io/reservas-chromebook-2026/",
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+                cerrarLogin();
+            } else {
+                document.getElementById("errorMsg").style.display = "block";
+                inputField.value = "";
+                inputField.focus();
+            }
+        }
+
+        function manejarEnter(event) {
+            if (event.key === "Enter") {
+                validarLogin();
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png" alt="Logo">
+            <h1>Administración<br>Pedagógica</h1>
+            <span>2026</span>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="espacios.html">Administración de Espacios</a>
+            <a href="informatica.html" class="active">Área Informática</a>
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h2>Depto. Informática / Área Restringida</h2>
+
+        <section class="box">
+            <h3>REGISTRO DE RESERVA, FILTROS Y GRÁFICOS</h3>
+            <p>Acceso al sistema de control y trazabilidad de equipos tecnológicos.</p>
+        </section>
+
+        <div class="image-center-box">
+            <img src="https://i.postimg.cc/MGH0FZxz/Captura-desde-2026-01-22-19-16-56.png" alt="Dashboard">
+        </div>
+
+        <section class="space-buttons" style="margin-bottom: 60px;">
+            <button class="space-btn" onclick="abrirLogin()">
+                ACCEDER AL REGISTRO
+            </button>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-title">
+                    Liceo Bicentenario Nuestra Señora de Guadalupe
+                </p>
+                <p>
+                    📧 <strong>Correo electrónico:</strong> liceobicentenario@ceas.cl &nbsp; | &nbsp;
+                    📍 <strong>Dirección:</strong> San José de la Estrella Nº 0857, La Granja
+                </p>
+                <p>
+                    📞 <strong>Teléfonos:</strong> +56 2 2541 1023 – +56 2 2541 9631
+                </p>
+                <p class="footer-copy">
+                    © 2026 Administración Pedagógica · Todos los derechos reservados
+                </p>
+                <p class="footer-copy" style="margin-top: 5px;">
+                    💻 Desarrollado por <strong>Franco</strong>
+                </p>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<!-- MODAL DE LOGIN -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarLogin()">&times;</span>
+        <h3>Acceso Restringido</h3>
+        <p>Por favor, ingrese la clave de acceso:</p>
+        <input type="password" id="clave" placeholder="Contraseña" onkeypress="manejarEnter(event)">
+        <button onclick="validarLogin()">Ingresar</button>
+        <p id="errorMsg" class="error">Clave incorrecta. Intente nuevamente.</p>
+    </div>
+</div>
+
+<!-- Botón volver arriba -->
+<button id="btn-top" title="Volver arriba">&#8679;</button>
+<script>
+    var btnTop = document.getElementById('btn-top');
+    window.addEventListener('scroll', function() {
+        btnTop.style.display = window.scrollY > 200 ? 'flex' : 'none';
+    });
+    btnTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>

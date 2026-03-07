@@ -1,0 +1,34 @@
+    Protecciones adicionales:
+    
+    
+A. En el servidor web (.htaccess):
+apache# Proteger archivos de código fuente
+<FilesMatch "\.(html|css|js)$">
+    Header set X-Copyright "Copyright 2026 Franco - All Rights Reserved"
+    Header set X-Developer "Franco"
+</FilesMatch>
+
+
+B. Meta tags en HTML (ya están):
+
+Los headers de copyright en comentarios HTML son visibles en "Ver código fuente"
+
+C. Para mayor seguridad:
+
+Usa control de versiones (Git) para rastrear cambios
+Haz backups regulares firmados digitalmente
+Considera registrar el copyright formalmente
+
+📝 Cómo funciona la protección:
+
+Copyright visible: Cualquiera que vea el código fuente verá inmediatamente los avisos de copyright
+Créditos públicos: En el footer de cada página aparece "Desarrollado por Franco"
+Documentación legal: LICENSE.txt y README.md establecen los términos legales
+Trazabilidad: Si alguien copia el código, los headers de copyright los delatan
+
+⚠️ Importante:
+Aunque estas protecciones son buenas, la mejor protección legal es:
+
+Guardar evidencia de que eres el autor original (emails, commits de git con fechas)
+Considerar un registro de propiedad intelectual formal si es muy importante
+Tener contratos claros con el liceo sobre la propiedad del código
