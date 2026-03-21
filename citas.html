@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+================================================================================
+    Copyright © 2026 Franco - Todos los derechos reservados
+    Sistema de Administración Pedagógica - Citas Apoderados
+    Liceo Bicentenario Nuestra Señora de Guadalupe
+    ADVERTENCIA: Código protegido. Prohibida su modificación sin autorización.
+    Desarrollador: Franco | Año: 2026
+================================================================================
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Citas Apoderados | Liceo Bicentenario Nuestra Señora de Guadalupe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .space-btn {
+            text-decoration: none;
+        }
+
+        .ceas-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .ceas-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #btn-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 46px;
+            height: 46px;
+            background-color: #27ae60;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #btn-top:hover {
+            background-color: #219a52;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Botón hamburguesa (solo visible en móvil) -->
+<button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png" class="logo" alt="Insignia institucional">
+            <h1>Administración<br>Pedagógica</h1>
+            <span>2026</span>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="espacios.html">Administración de Espacios</a>
+            <a href="informatica.html">Área Informática</a>
+            <a href="citas.html" class="active">Citas Apoderados</a>
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="banner-home">
+            <img src="https://i.postimg.cc/xCXfWMJN/Captura-desde-2026-01-22-18-11-23.png"
+                 alt="Banner Gestión de Entrevistas">
+        </div>
+
+        <section class="box">
+            <h2>Gestión de Entrevistas de Apoderados</h2>
+        </section>
+
+        <section class="info-diagram">
+            <div class="ceas-layout">
+
+                <div class="ceas-image">
+                    <img src="https://i.postimg.cc/YCDTTV6c/Captura-desde-2026-01-22-18-14-42.png"
+                         alt="Agendamiento de entrevista de apoderados">
+                </div>
+
+                <div class="ceas-text">
+                    <h3>Agendamiento de entrevista de apoderados</h3>
+
+                    <p>
+                        El sistema de Gestión de Entrevistas de Apoderados tiene como
+                        finalidad organizar, registrar y facilitar el proceso de
+                        comunicación entre los docentes y los apoderados del
+                        establecimiento, asegurando una atención ordenada, oportuna
+                        y eficiente.
+                    </p>
+
+                    <p>
+                        Este módulo está destinado a los docentes del establecimiento
+                        para la solicitud, coordinación y registro de entrevistas con
+                        los apoderados. Su utilización permite organizar instancias
+                        formales de comunicación, registrar acuerdos adoptados y
+                        realizar seguimiento a los compromisos adquiridos,
+                        fortaleciendo el trabajo colaborativo entre familia y
+                        establecimiento en beneficio del proceso educativo y el
+                        desarrollo integral de los estudiantes.
+                    </p>
+
+                    <p>
+                        El uso responsable de este sistema contribuye a optimizar los
+                        tiempos de atención, mantener registros claros y mejorar la
+                        calidad de la gestión institucional.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="space-buttons" style="margin-bottom: 60px;">
+            <a href="https://docs.google.com/spreadsheets/d/1dX_-_vqgKLsDRQwdAQ4dL3jE-pe8tK3-/edit?gid=1373403992#gid=1373403992"
+               target="_blank"
+               class="space-btn">
+                AGENDAR
+            </a>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-title">
+                    Liceo Bicentenario Nuestra Señora de Guadalupe
+                </p>
+                <p>
+                    📧 <strong>Correo electrónico:</strong> liceobicentenario@ceas.cl &nbsp; | &nbsp;
+                    📍 <strong>Dirección:</strong> San José de la Estrella Nº 0857, La Granja
+                </p>
+                <p>
+                    📞 <strong>Teléfonos:</strong> +56 2 2541 1023 – +56 2 2541 9631
+                </p>
+                <p class="footer-copy">
+                    © 2026 Administración Pedagógica · Todos los derechos reservados
+                </p>
+                <p class="footer-copy" style="margin-top: 5px;">
+                    💻 Desarrollado por <strong>Franco</strong>
+                </p>
+            </div>
+        </footer>
+
+    </main>
+</div>
+
+<!-- OVERLAY MENÚ MÓVIL -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- BOTÓN VOLVER ARRIBA -->
+<button id="btn-top" title="Volver arriba">&#8679;</button>
+
+<script>
+    // Menú hamburguesa
+    var hamburger = document.getElementById('hamburgerBtn');
+    var sidebar   = document.querySelector('.sidebar');
+    var overlay   = document.getElementById('sidebarOverlay');
+
+    function abrirMenu() {
+        sidebar.classList.add('open');
+        overlay.classList.add('open');
+    }
+    function cerrarMenu() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('open');
+    }
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            sidebar.classList.contains('open') ? cerrarMenu() : abrirMenu();
+        });
+    }
+    if (overlay) {
+        overlay.addEventListener('click', cerrarMenu);
+    }
+
+    document.querySelectorAll('.menu a').forEach(function(link) {
+        link.addEventListener('click', cerrarMenu);
+    });
+
+    // Botón volver arriba
+    var btnTop = document.getElementById('btn-top');
+    window.addEventListener('scroll', function() {
+        btnTop.style.display = window.scrollY > 200 ? 'flex' : 'none';
+    });
+    btnTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
