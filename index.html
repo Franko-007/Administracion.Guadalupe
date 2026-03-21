@@ -3,15 +3,11 @@
 <!--
 ================================================================================
     Copyright © 2026 Franco - Todos los derechos reservados
-    
     Sistema de Administración Pedagógica
     Liceo Bicentenario Nuestra Señora de Guadalupe
-    
     ADVERTENCIA: Este código está protegido por derechos de autor.
     Prohibida su modificación, copia o distribución sin autorización.
-    
-    Desarrollador: Franco
-    Año: 2026
+    Desarrollador: Franco | Año: 2026
 ================================================================================
 -->
 <head>
@@ -20,38 +16,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png">
     <link rel="stylesheet" href="styles.css">
-<style>
-    /* BOTÓN VOLVER ARRIBA */
-    #btn-top {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 46px;
-        height: 46px;
-        background-color: #1f2f5c;
-        color: #ffffff;
-        border: none;
-        border-radius: 50%;
-        font-size: 22px;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: background 0.3s, transform 0.2s;
-    }
-    #btn-top:hover {
-        background-color: #2f4179;
-        transform: translateY(-3px);
-    }
-</style>
+    <style>
+        #btn-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 46px;
+            height: 46px;
+            background-color: #27ae60;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #btn-top:hover {
+            background-color: #219a52;
+            transform: translateY(-3px);
+        }
+
+        /* 3 botones centrados en inicio */
+        .home-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0 60px;
+        }
+
+        .home-buttons .space-btn {
+            min-width: 220px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
 <div class="layout">
 
-    <!-- MENÚ LATERAL -->
     <aside class="sidebar">
         <div class="sidebar-header">
             <img src="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png" class="logo" alt="Insignia institucional">
@@ -63,14 +71,13 @@
             <a href="index.html" class="active">Inicio</a>
             <a href="espacios.html">Administración de Espacios</a>
             <a href="informatica.html">Área Informática</a>
+            <a href="citas.html">Citas Apoderados</a>
             <a href="preguntas.html">Preguntas Frecuentes</a>
         </nav>
     </aside>
 
-    <!-- CONTENIDO -->
     <main class="main-content">
 
-        <!-- BANNER -->
         <div class="banner-home">
             <img src="https://i.postimg.cc/mgmSJkDW/Captura-desde-2026-01-22-12-42-56.png"
                  alt="Banner Administración Pedagógica">
@@ -82,7 +89,6 @@
             Liceo Bicentenario Nuestra Señora de Guadalupe.
         </p>
 
-        <!-- OBJETIVO -->
         <section class="box">
             <h2>Objetivo del Departamento</h2>
             <p>
@@ -95,7 +101,6 @@
             </p>
         </section>
 
-        <!-- CEAS -->
         <section class="info-diagram">
             <div class="ceas-layout">
                 <div class="ceas-image">
@@ -121,7 +126,6 @@
             </div>
         </section>
 
-        <!-- LBNSG -->
         <section class="info-diagram">
             <div class="ceas-layout">
                 <div class="ceas-image">
@@ -145,13 +149,14 @@
             </div>
         </section>
 
-        <!-- BOTONES DE ACCESO (ESTILO AZUL) -->
-        <section class="space-buttons" style="margin-top: 40px; margin-bottom: 60px;">
+        <!-- 3 BOTONES CENTRADOS -->
+        <div class="home-buttons">
             <a href="espacios.html" class="space-btn">ADMINISTRACIÓN DE ESPACIOS</a>
             <a href="informatica.html" class="space-btn">ÁREA INFORMÁTICA</a>
-        </section>
+            <a href="citas.html" class="space-btn">CITAS APODERADOS</a>
+        </div>
 
-             <footer class="footer">
+        <footer class="footer">
             <div class="footer-content">
                 <p class="footer-title">
                     Liceo Bicentenario Nuestra Señora de Guadalupe
@@ -174,7 +179,6 @@
     </main>
 </div>
 
-<!-- Botón volver arriba -->
 <button id="btn-top" title="Volver arriba">&#8679;</button>
 <script>
     var btnTop = document.getElementById('btn-top');
