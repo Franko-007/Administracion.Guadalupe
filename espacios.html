@@ -16,7 +16,6 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/sxxwfhwK/LOGO-LBSNG-06-237x300.png">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Centrar la imagen dentro de su contenedor */
         .image-box {
             display: flex;
             justify-content: center;
@@ -24,42 +23,38 @@
             width: 100%;
             margin: 20px 0;
         }
-
         .image-box img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-
         .space-btn {
             text-decoration: none;
         }
-    
-    /* BOTÓN VOLVER ARRIBA */
-    #btn-top {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 46px;
-        height: 46px;
-        background-color: #1f2f5c;
-        color: #ffffff;
-        border: none;
-        border-radius: 50%;
-        font-size: 22px;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: background 0.3s, transform 0.2s;
-    }
-    #btn-top:hover {
-        background-color: #2f4179;
-        transform: translateY(-3px);
-    }
-</style>
+        #btn-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 46px;
+            height: 46px;
+            background-color: #27ae60;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #btn-top:hover {
+            background-color: #219a52;
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 <body>
 
@@ -71,11 +66,11 @@
             <h1>Administración<br>Pedagógica</h1>
             <span>2026</span>
         </div>
-
         <nav class="menu">
             <a href="index.html">Inicio</a>
             <a href="espacios.html" class="active">Administración de Espacios</a>
             <a href="informatica.html">Área Informática</a>
+            <a href="citas.html">Citas Apoderados</a>
             <a href="preguntas.html">Preguntas Frecuentes</a>
         </nav>
     </aside>
@@ -100,7 +95,6 @@
 
         <section class="box">
             <h3>Procedimientos para registro y gestión de equipos Chromebook</h3>
-
             <div class="image-box">
                 <img src="https://i.postimg.cc/bN2pVSwy/Captura-desde-2026-01-22-12-15-52.png"
                      alt="Procedimiento de registro y gestión de Chromebooks">
@@ -109,18 +103,13 @@
 
         <section class="box">
             <h3>Procedimientos para registro y gestión de equipos Chromebook</h3>
-
             <div class="alert">
                 <strong>IMPORTANTE:</strong> Todas las agendas de reservas se bloquean cada
                 día a partir de las <strong>08:10 horas</strong>. Posterior a este horario,
                 deberá coordinar directamente con el Sr. Raúl Hernández o con el encargado
                 de Informática correspondiente.
             </div>
-
-            <p class="text-justify">
-                <strong>IMPORTANTE:</strong>
-            </p>
-
+            <p class="text-justify"><strong>IMPORTANTE:</strong></p>
             <ol class="text-justify">
                 <li>
                     <strong>Registro en el documento Drive:</strong>
@@ -129,14 +118,12 @@
                     evitar duplicaciones que puedan generar confusión y asegurar que todos los
                     docentes tengan acceso equitativo al uso de los equipos.
                 </li>
-
                 <li>
                     <strong>Devolución de Chromebooks:</strong>
                     Los equipos deben ser devueltos a Administración para su correspondiente
                     revisión técnica y para garantizar que sus baterías sean cargadas
                     adecuadamente, asegurando así su óptimo funcionamiento.
                 </li>
-
                 <li>
                     <strong>Guía de distribución:</strong>
                     Es necesario completar la guía de distribución de equipos del laboratorio
@@ -152,7 +139,6 @@
             <a href="https://docs.google.com/spreadsheets/d/1ILt_CbMFvp3d3fjxHenM_CyNHaUWmY2079aj8ZKJzRI/edit?gid=2050459458#gid=2050459458" target="_blank" class="space-btn">LAB MOVIL</a>
             <a href="https://docs.google.com/spreadsheets/d/1EO-pqiWmvSrX1P3sNVmQ9bwZFXMTEmFEOobgwmsBr3M/edit?gid=626411165#gid=626411165" target="_blank" class="space-btn">CASINO JUNAEB</a>
             <a href="https://docs.google.com/spreadsheets/d/1sbfACsKi5E1EtoCY9ej1POM_gNHiGjuFz17sOP7plNE/edit?gid=668843837#gid=668843837" target="_blank" class="space-btn">GIMNASIO</a>
-
             <a href="https://docs.google.com/spreadsheets/d/1sgl8xEYIMbrycdyfQEX8JmswtSttNZVw7-_i_qV8H1E/edit?gid=1497878348#gid=1497878348" target="_blank" class="space-btn">SALA MULTIUSO</a>
             <a href="https://docs.google.com/spreadsheets/d/1zX3hT_KnqqtKHDpnHZtCBriT4Bs0w6_LKzS8C3LfCAQ/edit?gid=765598183#gid=765598183" target="_blank" class="space-btn">LAB. CIENCIAS</a>
             <a href="https://docs.google.com/spreadsheets/d/1cXUDmlnVzrTnhI6iFmGFWru24KnU339QRRxnwJVUfSs/edit?gid=121897525#gid=121897525" target="_blank" class="space-btn">CAPILLA</a>
@@ -161,29 +147,17 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-title">
-                    Liceo Bicentenario Nuestra Señora de Guadalupe
-                </p>
-                <p>
-                    📧 <strong>Correo electrónico:</strong> liceobicentenario@ceas.cl &nbsp; | &nbsp;
-                    📍 <strong>Dirección:</strong> San José de la Estrella Nº 0857, La Granja
-                </p>
-                <p>
-                    📞 <strong>Teléfonos:</strong> +56 2 2541 1023 – +56 2 2541 9631
-                </p>
-                <p class="footer-copy">
-                    © 2026 Administración Pedagógica · Todos los derechos reservados
-                </p>
-                <p class="footer-copy" style="margin-top: 5px;">
-                    💻 Desarrollado por <strong>Franco</strong>
-                </p>
+                <p class="footer-title">Liceo Bicentenario Nuestra Señora de Guadalupe</p>
+                <p>📧 <strong>Correo electrónico:</strong> liceobicentenario@ceas.cl &nbsp; | &nbsp; 📍 <strong>Dirección:</strong> San José de la Estrella Nº 0857, La Granja</p>
+                <p>📞 <strong>Teléfonos:</strong> +56 2 2541 1023 – +56 2 2541 9631</p>
+                <p class="footer-copy">© 2026 Administración Pedagógica · Todos los derechos reservados</p>
+                <p class="footer-copy" style="margin-top: 5px;">💻 Desarrollado por <strong>Franco</strong></p>
             </div>
         </footer>
 
     </main>
 </div>
 
-<!-- Botón volver arriba -->
 <button id="btn-top" title="Volver arriba">&#8679;</button>
 <script>
     var btnTop = document.getElementById('btn-top');
